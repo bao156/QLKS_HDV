@@ -1,0 +1,75 @@
+package com.qlks_hdv.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Users")
+public class UserEntity {
+
+	@Id
+	@Column(name="username")
+	private String username;
+	
+	@Column(name="password")
+	private String password;
+	
+	@ManyToOne
+	@JoinColumn(name="role_id")
+	private RolesEntity role;
+	
+	@OneToOne(mappedBy="user")
+	private StaffEntity staff;
+	
+	public UserEntity() {
+		super();
+	}
+
+
+	public String getUsername() {
+		return username;
+	}
+
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+	public RolesEntity getRole() {
+		return role;
+	}
+
+
+	public void setRole(RolesEntity role) {
+		this.role = role;
+	}
+
+
+	public StaffEntity getStaff() {
+		return staff;
+	}
+
+
+	public void setStaff(StaffEntity staff) {
+		this.staff = staff;
+	}
+	
+	
+}

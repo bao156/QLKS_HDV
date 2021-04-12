@@ -1,0 +1,17 @@
+package com.qlks_hdv.converter;
+
+import com.qlks_hdv.dto.BookingCardDTO;
+import com.qlks_hdv.dto.CustomerDTO;
+import com.qlks_hdv.entity.BookingCardEntity;
+import com.qlks_hdv.entity.CustomerEntity;
+
+public class BookingCardConverting {
+
+	public BookingCardEntity toEntity(BookingCardDTO bookingcardDTO, BookingCardEntity bookingCard)
+	{
+		bookingCard.se
+		return customer;
+	}
+	
+
+}
