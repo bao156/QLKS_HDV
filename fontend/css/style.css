@@ -11,7 +11,7 @@ body {
     width: 7%;
     float: left;
     background-color: f1f1f1;
-    height: 40em;
+    height: 55em;
 }
   
 .right-side {
@@ -98,10 +98,151 @@ div.timetable table {
   table-layout: fixed;
 }
 
-div.timetable table td:nth-child(1){
-
+.account-form {
+  margin-left: 15em;
+  margin-top: 2em;
+  width: 50em;
+  height: 50em;
 }
 
 
 
+/*Login*/
+#login form {
+  border: 3px solid #f1f1f1;
+}
 
+#login form input[type=text],
+#login form input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#login form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#login form button:hover {
+  opacity: 0.8;
+}
+
+#login form .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+#login form .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+#login form img.avatar {
+  width: 40%; 
+  margin-bottom: 3em;
+}
+
+#login form .container {
+  padding: 38px;
+
+}
+
+#account form span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+#form-login {
+  height: 456px;
+  width: 466px;
+  margin-left: 25em;
+  margin-top: 8em;
+}
+
+#form-register{
+  height: 456px;
+  width: 466px;
+  margin-left: 25em;
+  margin-top: 8em;
+}
+
+/* Register*/
+
+/* Full-width input fields */
+#register form input[type=text],
+#register form input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+#register form input[type=text]:focus,
+#register form input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+#register form hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+#register button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+#register form .cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+#register form .cancelbtn, #register form
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+#register form .container {
+  padding: 16px;
+}
+
+/* Clear floats */
+#register form .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#register form img.avatar {
+  width: 40%;
+  margin-top: 2em;
+  margin-left: 8.5em;
+}
