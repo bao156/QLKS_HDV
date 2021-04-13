@@ -1,0 +1,21 @@
+package com.qlks_hdv.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.qlks_hdv.dto.UserDTO;
+import com.qlks_hdv.repository.UserRepository;
+import com.qlks_hdv.service.IUserService;
+
+@Service
+public class UserService implements IUserService{
+
+	@Autowired
+	private UserRepository repo;
+	
+	@Override
+	public UserDTO save(UserDTO user)
+	{
+		return user;
+	}
+}

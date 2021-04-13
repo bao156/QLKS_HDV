@@ -1,0 +1,15 @@
+package com.qlks_hdv.converter;
+
+import com.qlks_hdv.dto.UserDTO;
+import com.qlks_hdv.entity.UserEntity;
+
+public class UserConverting {
+	public UserEntity toEntity(UserDTO dto)
+	{
+		UserEntity user=new UserEntity();
+		user.setUsername(dto.getUsername());
+		user.setPassword(dto.getPassword());
+		return user;
+	}
+
+}

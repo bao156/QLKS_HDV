@@ -1,0 +1,38 @@
+package com.qlks_hdv.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.qlks_hdv.converter.UserConverting;
+import com.qlks_hdv.dto.UserDTO;
+import com.qlks_hdv.entity.RolesEntity;
+import com.qlks_hdv.entity.UserEntity;
+import com.qlks_hdv.repository.RoleRepository;
+import com.qlks_hdv.repository.UserRepository;
+import com.qlks_hdv.service.IUserService;
+
+@Service
+public class UserService implements IUserService{
+
+	@Autowired
+	private UserRepository userRepo;
+	
+	@Autowired
+	private RoleRepository roleRepo;
+	
+	@Autowired
+	private UserConverting convert;
+	
+	@Override
+	public UserDTO save(@RequestBody UserDTO userDTO)
+	{
+		UserEntity user=new UserEntity();
+	    RolesEntity role=roleRepo.findOne(userDTO.getRoleId());
+		user.setRole(role);
+		System.out.println(role.getRoleName());
+		user=convert.toEntity(userDTO);
+		userRepo.save(user);
+		return userDTO;
+	}
+}

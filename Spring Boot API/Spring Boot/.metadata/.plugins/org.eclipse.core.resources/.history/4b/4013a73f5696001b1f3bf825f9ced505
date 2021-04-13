@@ -1,0 +1,21 @@
+package com.qlks_hdv.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.qlks_hdv.dto.StaffDTO;
+import com.qlks_hdv.repository.StaffRepository;
+import com.qlks_hdv.service.IStaffService;
+
+public class StaffService implements IStaffService{
+	
+	@Autowired
+	private StaffRepository staffRepo;
+	
+	@Override
+	public StaffDTO save(StaffDTO staffDTO)
+	{
+		
+		return staffDTO;
+	}
+
+}

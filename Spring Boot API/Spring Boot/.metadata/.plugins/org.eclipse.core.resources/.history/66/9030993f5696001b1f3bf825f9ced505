@@ -1,0 +1,22 @@
+package com.qlks_hdv.converter;
+
+import org.springframework.stereotype.Component;
+
+import com.qlks_hdv.dto.StaffDTO;
+import com.qlks_hdv.entity.StaffEntity;
+
+@Component
+public class StaffConverting {
+
+	public StaffEntity toEntity(StaffDTO staffDTO)
+	{
+		StaffEntity staff=new StaffEntity();
+		staff.setFirstName(staffDTO.getFirstName());
+		staff.setLastName(staffDTO.getLastName());
+		staff.setPhone(staffDTO.getPhone());
+		staff.setEmail(staffDTO.getEmail());
+		staff.setAddress(staffDTO.getAddress());
+		return staff;
+		
+	}
+}
