@@ -1,0 +1,35 @@
+package com.qlks_hdv.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.qlks_hdv.dto.CustomerDTO;
+import com.qlks_hdv.entity.CustomerEntity;
+import com.qlks_hdv.repository.CustomerRepository;
+import com.qlks_hdv.service.ICustomerService;
+
+@Service
+public class CustomerService implements ICustomerService{
+	
+	@Autowired
+	private CustomerRepository cusRepo;
+	
+	@Override
+	public CustomerDTO save(CustomerDTO customerDTO)
+	{
+		CustomerEntity customer=new CustomerEntity();
+		return customerDTO;
+	}
+
+	@Override
+	public List<CustomerEntity> getList()
+	{
+		List<CustomerEntity> list=new ArrayList<>();
+		list=cusRepo.findAll();
+		return list;
+	}
+	
+	
+}

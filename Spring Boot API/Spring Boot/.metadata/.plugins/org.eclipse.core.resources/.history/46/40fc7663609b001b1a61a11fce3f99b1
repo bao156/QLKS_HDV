@@ -1,0 +1,27 @@
+package com.qlks_hdv.converter;
+
+import com.qlks_hdv.dto.DiscountDTO;
+import com.qlks_hdv.entity.DiscountEntity;
+
+public class DiscountConverting {
+	
+	public DiscountEntity toEntity(DiscountDTO discountDTO, DiscountEntity discount)
+	{
+		discount.setName(discountDTO.getName());
+		discount.setValue(discountDTO.getValue());
+		discount.setUseAt(discountDTO.getUseAt());
+		discount.setEndAt(discountDTO.getEndAt());
+		return discount;
+	}
+	
+	public DiscountDTO toDTO(DiscountDTO discountDTO, DiscountEntity discount)
+	{
+		discountDTO.setName(discount.getName());
+		discountDTO.setValue(discount.getValue());
+		discountDTO.setUseAt(discount.getUseAt());
+		discountDTO.setEndAt(discount.getEndAt());
+		return discountDTO;
+	}
+	
+
+}

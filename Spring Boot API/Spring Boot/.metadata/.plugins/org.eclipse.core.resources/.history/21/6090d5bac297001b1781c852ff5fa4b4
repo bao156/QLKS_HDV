@@ -1,0 +1,18 @@
+package com.qlks_hdv.converter;
+
+import org.springframework.stereotype.Component;
+
+import com.qlks_hdv.dto.RoomTypeDTO;
+import com.qlks_hdv.entity.RoomEntity;
+import com.qlks_hdv.entity.RoomTypeEntity;
+
+@Component
+public class RoomTypeConverting {
+	public RoomEntity toEntity(RoomTypeDTO typeDTO,RoomTypeEntity typeEntity)
+	{
+		typeEntity.setNumberOfBed(numberOfBed);
+		
+		return typeEntity;
+	}
+
+}

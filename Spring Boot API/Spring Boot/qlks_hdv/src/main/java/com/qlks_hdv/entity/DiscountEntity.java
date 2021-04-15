@@ -1,13 +1,18 @@
 package com.qlks_hdv.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
+@Table(name="Discount")
 public class DiscountEntity {
 	@Id
 	@GeneratedValue
@@ -15,10 +20,10 @@ public class DiscountEntity {
 	private Integer id;
 	
 	@Column(name="discount_name")
-	private String name;
+	private String discountName;
 	
 	@Column(name="discount_value")
-	private Float value;
+	private Float discountValue;
 	
 	@Column(name="useAt")
 	@DateTimeFormat(pattern = "yyyy/mm/dd")  
@@ -27,26 +32,54 @@ public class DiscountEntity {
 	@Column(name="endAt")
 	@DateTimeFormat(pattern = "yyyy/mm/dd")  
 	private String endAt;
+	
+	@OneToMany(mappedBy="discount")
+	private List<BookingCardEntity> bookingCard;
+	
+	
+	
+	public DiscountEntity() {
+		super();
+	}
+	
+	
+
+	public List<BookingCardEntity> getBookingCard() {
+		return bookingCard;
+	}
+
+
+
+	public void setBookingCard(List<BookingCardEntity> bookingCard) {
+		this.bookingCard = bookingCard;
+	}
+
+
 
 	public Integer getId() {
 		return id;
 	}
 
-
-	public String getName() {
-		return name;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	
+
+	public String getDiscountName() {
+		return discountName;
 	}
 
-	public Float getValue() {
-		return value;
+	public void setDiscountName(String discountName) {
+		this.discountName = discountName;
 	}
 
-	public void setValue(Float value) {
-		this.value = value;
+	public Float getDiscountValue() {
+		return discountValue;
+	}
+
+	public void setDiscountValue(Float discountValue) {
+		this.discountValue = discountValue;
 	}
 
 	public String getUseAt() {
@@ -66,19 +99,8 @@ public class DiscountEntity {
 	}
 
 
-	public DiscountEntity() {
-		super();
-	}
+	
 
-
-	public DiscountEntity(Integer id, String name, Float value, String useAt, String endAt) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.value = value;
-		this.useAt = useAt;
-		this.endAt = endAt;
-	}
 	
 	
 }
