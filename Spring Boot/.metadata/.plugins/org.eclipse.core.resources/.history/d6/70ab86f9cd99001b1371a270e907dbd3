@@ -1,5 +1,0 @@
-package com.qlks_hdv.service;
-
-public interface IRoomService {
-
-}

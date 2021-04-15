@@ -1,5 +1,0 @@
-package com.qlks_hdv.repository;
-
-public interface StatusRepository {
-
-}
