@@ -2,7 +2,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../js/utils.js"> </script>
+    <script src="../js/utils.js">
+    </script>
 </head>
 
 <body>
@@ -26,8 +27,8 @@
                         <a href="">ROOMS</a>
                     </div>
                     <hr class="solid">
-                    <div class="timetable">
-                        <iframe src="calender.html" title="description" height="85%" width="100%"></iframe>
+                    <div class="">
+                        <iframe src="calender.html" title="description" height="90%" width="100%"></iframe>
                     </div>
                 </div>
 
@@ -38,22 +39,21 @@
                     <br>
                     <form action="/action_page.php" method="post" id="form-login">
                         <div class="imgcontainer">
-                          <img src="../images/logo-hotel-register.png" alt="Avatar" class="avatar">
-                        </div>          
-                        <div class="container">
-                          <label for="uname"><b>Tài khoản</b></label>
-                          <input type="text" placeholder="Enter Username" name="uname" required>
-                    
-                          <label for="psw"><b>Mật khẩu</b></label>
-                          <input type="password" placeholder="Enter Password" name="psw" required>
-                    
-                          <button type="submit">Đăng nhập</button>
+                            <img src="../images/logo-hotel-register.png" alt="Avatar" class="avatar">
                         </div>
-                    
+                        <div class="container">
+                            <label for="uname"><b>Tài khoản</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+
+                            <label for="psw"><b>Mật khẩu</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                            <button type="submit">Đăng nhập</button>
+                        </div>
+
                         <div class="" style="background-color:#f1f1f1; height: 2em;">
-                          <a style="float: left; margin-left: 1em; margin-top: 0.5em" href="#" 
-                           onclick="showForm('register')">Đăng ký</a>
-                          <a style="float: right; margin-right: 1em; margin-top: 0.5em" href="">Quên mật khẩu?</a>
+                            <a style="float: left; margin-left: 1em; margin-top: 0.5em" href="#" onclick="showForm('register')">Đăng ký</a>
+                            <a style="float: right; margin-right: 1em; margin-top: 0.5em" href="">Quên mật khẩu?</a>
                         </div>
                     </form>
                     <!--End: Login-->
@@ -66,19 +66,19 @@
                     <form action="/action_page.php" style="border:1px solid #ccc" id="form-register">
                         <img src="../images/logo-hotel-register.png" alt="Avatar" class="avatar">
                         <div class="container">
-                          <label for="email"><b>Tài khoản</b></label>
-                          <input type="text" placeholder="" name="email" required>
-                    
-                          <label for="psw"><b>Mật khẩu</b></label>
-                          <input type="password" placeholder="" name="psw" required>
-                    
-                          <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
-                          <input type="password" placeholder="" name="psw-repeat" required>
-                    
-                          <div class="clearfix" style="  width: 100%;">
-                            <button type="submit" class="signupbtn">Đăng ký</button>
-                            <button type="button" onclick="showForm('login')" class="cancelbtn">Hủy bỏ</button>
-                          </div>
+                            <label for="email"><b>Tài khoản</b></label>
+                            <input type="text" placeholder="" name="email" required>
+
+                            <label for="psw"><b>Mật khẩu</b></label>
+                            <input type="password" placeholder="" name="psw" required>
+
+                            <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+                            <input type="password" placeholder="" name="psw-repeat" required>
+
+                            <div class="clearfix" style="  width: 100%;">
+                                <button type="submit" class="signupbtn">Đăng ký</button>
+                                <button type="button" onclick="showForm('login')" class="cancelbtn">Hủy bỏ</button>
+                            </div>
                         </div>
                     </form>
                     <!--End: Register-->
