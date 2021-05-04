@@ -76,6 +76,8 @@ body {
 .nav-top a.active {
     color: black;
     background-color: #ddd;
+    pointer-events: none;
+    cursor: default;
 }
 
 .content {

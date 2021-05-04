@@ -7,11 +7,19 @@
 // })
 
 function toggleForm(form) {
-    toggle = toggle * (-1);
-    alert(toggle);
+    document.getElementById('btn-' + form).className = 'active';
+    document.getElementById(form).style.display = 'block';
+
+    if (form == 'schedual') {
+        document.getElementById('btn-rooms').className = '';
+        document.getElementById('rooms').style.display = 'none';
+    } else {
+        document.getElementById('btn-schedual').className = '';
+        document.getElementById('schedual').style.display = 'none';
+    }
 }
 
-function closeAllTabs(){
+function closeAllTabs() {
     document.getElementById("booking").style.display = "none";
     document.getElementById("login").style.display = "none";
     document.getElementById("register").style.display = "none";
