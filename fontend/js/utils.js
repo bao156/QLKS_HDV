@@ -21,8 +21,8 @@ function toggleForm(form) {
 
 function closeAllTabs() {
     document.getElementById("booking").style.display = "none";
-    document.getElementById("login").style.display = "none";
-    document.getElementById("register").style.display = "none";
+    document.getElementById("manage-user").style.display = "none";
+    // document.getElementById("register").style.display = "none";
 }
 
 function showForm(option) {
@@ -36,8 +36,6 @@ function showForm(option) {
     }
 
     if (x.style.display === "none") {
-        if (option === "register") document.getElementById("login").style.display = "none";
-        if (option === "login") document.getElementById("register").style.display = "none";
         x.style.display = "block";
         btn.className = "active";
     } else {

@@ -268,3 +268,11 @@ button:hover {
     margin-top: 2em;
     margin-left: 8.5em;
 }
+
+#rooms {
+    display: none;
+}
+
+/* #user-manager-table {
+    display: none;
+} */
