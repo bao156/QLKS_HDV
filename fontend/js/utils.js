@@ -9,7 +9,7 @@
 function toggleForm(form) {
     document.getElementById('btn-' + form).className = 'active';
     document.getElementById(form).style.display = 'block';
-
+    
     if (form == 'schedual') {
         document.getElementById('btn-rooms').className = '';
         document.getElementById('rooms').style.display = 'none';
