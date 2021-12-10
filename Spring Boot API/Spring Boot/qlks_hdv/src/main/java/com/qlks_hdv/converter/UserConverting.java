@@ -18,10 +18,6 @@ public class UserConverting {
 	public UserDTO toDTO(UserEntity user)
 	{
 		UserDTO userDTO=new UserDTO();
-		if(user.getUsername()!=null)
-		{
-			
-		}
 		userDTO.setUsername(user.getUsername());
 		userDTO.setPassword(user.getPassword());	
 		return userDTO;

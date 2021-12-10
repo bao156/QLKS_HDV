@@ -1,214 +1,129 @@
+<!DOCTYPE html>
+<html lang='en'>
+
 <head>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="../js/utils.js"> </script>
-  <script src="../js/calender.js"> </script>
+    <meta charset='utf-8' />
+    <link href='/fullcalanders/lib/main.css' rel='stylesheet' />
+    <link href='/css/calender.css' rel='stylesheet' />
+    <script src='/fullcalanders/lib/main.js'></script>
+    <script src='/js/calender.js'></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            // var calendar = new FullCalendar.Calendar(calendarEl, {
+            //     locale: 'vi',
+            //     headerToolbar: {
+            //         center: 'addEventButton'
+            //     },
+
+            //     timeZone: 'UTC',
+            //     initialView: 'timeGridWeek',
+            //     // initialDate: '2021-05-01',
+            //     headerToolbar: {
+            //         left: 'prev,next today',
+            //         center: 'title',
+            //         right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            //     },
+            //     events: [{
+            //         title: 'All Day Event',
+            //         start: '2021-04-01'
+            //     }, {
+            //         title: 'Long Event',
+            //         start: '2021-04-07',
+            //         end: '2021-04-10'
+            //     }, {
+            //         groupId: '999',
+            //         title: 'Repeating Eventa',
+            //         start: '2021-04-09T16:00:00'
+            //     }, {
+            //         groupId: '999',
+            //         title: 'Repeating Event',
+            //         start: '2021-04-16T16:00:00'
+            //     }, {
+            //         title: 'Conference',
+            //         start: '2021-04-11',
+            //         end: '2021-04-13'
+            //     }, {
+            //         id: '1',
+            //         title: 'Meeting',
+            //         start: '2021-04-12T10:30:00',
+            //         end: '2021-04-12T12:30:00'
+            //     }, {
+            //         title: 'Lunch',
+            //         start: '2021-04-12T12:00:00'
+            //     }, {
+            //         title: 'Meeting',
+            //         start: '2021-04-12T14:30:00'
+            //     }, {
+            //         title: 'Birthday Party',
+            //         start: '2021-04-28T08:00:00',
+            //         end: '2021-04-28T09:30:00'
+            //     }, {
+            //         title: 'Click for Google',
+            //         url: 'http://google.com/',
+            //         start: '2021-04-28'
+            //     }]
+            // });
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                timeZone: 'UTC',
+                initialView: 'timeGridWeek',
+                headerToolbar: {
+                    left: 'prev,next today addEventButton',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                customButtons: {
+                    addEventButton: {
+                        text: 'Booking',
+                        click: function() {
+                            document.getElementById('id01').style.display = 'block';
+                        }
+                    }
+                }
+            });
+
+            calendar.render();
+        });
+    </script>
 </head>
 
 <body>
-  <!-- Start: Fillter -->
-  <br>
-  <label style="margin-left: 5px;">From: &nbsp</label>
-  <input type="date" id="date-schedual" name="date-schedual">
-  <!-- End: Fillter -->
-  
-  <div id="timetable" class="timetable">
-    <table>
-      <tr>
-        <th>Time</th>
-      </tr>
-      <tr>
-        <td rowspan="2">00:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
+    <div id='calendar'></div>
 
-      <tr>
-        <td rowspan="2">01:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
+    <div id="id01" class="modal">
+        <form class="modal-content animate" action="/" method="POST">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
 
-      <tr>
-        <td rowspan="2">02:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
+            <div class="container">
+                <label for="psw"><b>CMND</b></label>
+                <input type="text" placeholder="" name="psw" required>
 
-      <tr>
-        <td rowspan="2">03:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
+                <label for="uname"><b>Họ tên</b></label>
+                <input type="text" placeholder="" name="uname" required>
 
-      <tr>
-        <td rowspan="2">04:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
+                <label for="psw"><b>Tuổi</b></label>
+                <input type="text" placeholder="" name="psw" required>
 
-      <tr>
-        <td rowspan="2">05:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
+                <label for="psw" style="margin-left: 10em;"><b>Check In</b></label>
+                <input type="datetime-local" placeholder="" name="psw" required>
 
-      <tr>
-        <td rowspan="2">06:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
+                <label for="psw" style="margin-left: 15em;"><b>Check Out</b></label>
+                <input type="datetime-local" required>
 
-      <tr>
-        <td rowspan="2">07:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
+                <br>
+                <label for="psw"><b>Voucher</b></label>
+                <input type="text" required>
 
-      <tr>
-        <td rowspan="2">08:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">09:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">10:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">11:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">12:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">13:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">14:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">15:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">16:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">17:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">18:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">19:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">20:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">21:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-
-      <tr>
-        <td rowspan="2">22:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-      <tr>
-        <td rowspan="2">23:00</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-    </table>
-  </div>
+                <button type="submit">Book</button>
+            </div>
+        </form>
+    </div>
 
 </body>
+
+</html>

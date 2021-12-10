@@ -23,7 +23,6 @@ public class StaffController {
 	public StaffDTO saveStaff(@RequestBody StaffDTO staffDTO )
 	{
 		staffService.save(staffDTO);
-		System.out.print("le"+staffDTO.getId());
 		return staffDTO;
 	}
 	
@@ -32,7 +31,6 @@ public class StaffController {
 	{
 		staffDTO.setId(id);
 		staffService.save(staffDTO);
-		System.out.print("le"+staffDTO.getId());
 		return staffDTO;
 	}
 

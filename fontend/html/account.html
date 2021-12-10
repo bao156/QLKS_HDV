@@ -1,14 +1,51 @@
-<head>
-    <script src="../html/init.html"> </script>
-</head>
+<div id="login" style="display: none;">
+  <!--Start: Login-->
+  <h2>ĐĂNG NHẬP</h2>
+  <hr class="solid">
+  <br>
+  <form action="/action_page.php" method="post" id="form-login">
+      <div class="imgcontainer">
+          <img src="../images/logo-hotel-register.png" alt="Avatar" class="avatar">
+      </div>
+      <div class="container">
+          <label for="uname"><b>Tài khoản</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
 
-<body>
-    <div class="login">
-        <label>Tài khoản: </label>
-        <br>
-        <input type="text" />
-        <br>
-        <lable>Mật khẩu: </lable>
-    </div>
-</body>
-  
+          <label for="psw"><b>Mật khẩu</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit">Đăng nhập</button>
+      </div>
+
+      <div class="" style="background-color:#f1f1f1; height: 2em;">
+          <a style="float: left; margin-left: 1em; margin-top: 0.5em" href="#" onclick="showForm('register')">Đăng ký</a>
+          <a style="float: right; margin-right: 1em; margin-top: 0.5em" href="">Quên mật khẩu?</a>
+      </div>
+  </form>
+  <!--End: Login-->
+</div>
+
+<div id="register" style="display: none;">
+  <h2>ĐĂNG KÝ</h2>
+  <hr class="solid">
+  <!--Start: Register-->
+  <form action="/action_page.php" style="border:1px solid #ccc" id="form-register">
+      <img src="../images/logo-hotel-register.png" alt="Avatar" class="avatar">
+      <div class="container">
+          <label for="email"><b>Tài khoản</b></label>
+          <input type="text" placeholder="" name="email" required>
+
+          <label for="psw"><b>Mật khẩu</b></label>
+          <input type="password" placeholder="" name="psw" required>
+
+          <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+          <input type="password" placeholder="" name="psw-repeat" required>
+
+          <div class="clearfix" style="  width: 100%;">
+              <button type="submit" class="signupbtn">Đăng ký</button>
+              <button type="button" onclick="showForm('login')" class="cancelbtn">Hủy bỏ</button>
+          </div>
+      </div>
+  </form>
+  <!--End: Register-->
+</div>

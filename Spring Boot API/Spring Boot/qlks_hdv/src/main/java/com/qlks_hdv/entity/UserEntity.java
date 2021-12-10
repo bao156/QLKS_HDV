@@ -27,8 +27,21 @@ public class UserEntity {
 	@OneToOne(mappedBy="user")
 	private StaffEntity staff;
 	
+	@OneToOne(mappedBy="user")
+	private CustomerEntity customer;
+	
 	public UserEntity() {
 		super();
+	}
+
+
+	public CustomerEntity getCustomer() {
+		return customer;
+	}
+
+
+	public void setCustomer(CustomerEntity customer) {
+		this.customer = customer;
 	}
 
 

@@ -1,25 +1,18 @@
-
-
-function addColumn(roomNumber) {
-    var tbl = document.getElementsByTagName("table")[0];
-    var tr = tbl.getElementsByTagName("tr");
-
-    for (let i = 0; i < tr.length; i++) {
-        var trow;
-        if (i == 0) {
-            trow = document.createElement('th');
-            var input = document.createElement("div");
-            input.innerHTML = "Room " + roomNumber;
-            trow.appendChild(input);
-        } else {
-            trow = document.createElement('td');
-        }
-        tr[i].appendChild(trow);
-    }
+function removeEvent(id) {
+    var event = calendar.getEventById(id);
+    alert("Are You Remove Event " + event.title);
+    event.remove();
 }
 
-$(document).ready(function () {
-    for(let i=1; i<= 3; i++){
-        addColumn(i);
+function addEvent(event) {
+    if (!isNaN(event.date.valueOf())) { // valid?
+        calendar.addEvent({
+            title: 'dynamic event',
+            start: date,
+            allDay: true
+        });
+        alert('Great. Now, update your database...');
+    } else {
+        alert('Invalid date.');
     }
-});
+}
